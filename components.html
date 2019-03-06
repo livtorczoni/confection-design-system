@@ -68,15 +68,15 @@
 			</figure>
 		</section>
 		
-		<h2>Accordians</h2>
+		<h2>Accordions</h2>
 
 		<section class="examples">
 
-				<h3 class="examples-title">Accordian Menu</h3>
+				<h3 class="examples-title">Accordion Menu</h3>
 
 				<details>
 
-					<summary>Confection Accordian Menu</summary>
+					<summary>Confection Accordion Menu</summary>
 	
 					<div>
 	
@@ -113,12 +113,47 @@
 					<div>
 
 						<p>Cupcake Recipes</p>
+
 						<p>Brownie Recipes</p>
+
 						<p>Tarte Recipes</p>
 
 					</div>
 		
 				</details>
+
+		</section>
+
+		<section class="examples">
+
+			<h3 class="examples-title">Modal Dialog</h3>
+			
+			<dialog class="modal-demo">
+
+				<svg class="modal-alert" viewBox="0 0 349 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    				<g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        				<path d="M179.366563,53.7331263 L294.158359,283.316718 C295.640295,286.280589 294.438949,289.884628 291.475078,291.366563 C290.641945,291.783129 289.723267,292 288.791796,292 L59.2082039,292 C55.8944954,292 53.2082039,289.313708 53.2082039,286 C53.2082039,285.068529 53.4250745,284.149851 53.8416408,283.316718 L168.633437,53.7331263 C170.115372,50.7692553 173.719411,49.5679092 176.683282,51.0498447 C177.844446,51.6304269 178.785981,52.5719619 179.366563,53.7331263 Z" id="Triangle" stroke="#EF8478" stroke-width="10" fill="#FFFFFF"></path>
+	       				 <circle id="Oval" stroke="#EF8478" fill="#EF8478" cx="174" cy="261.967773" r="9.96777344"></circle>
+	       				 <rect id="Rectangle" stroke="#EF8478" fill="#EF8478" x="167.891113" y="115.5" width="12.2177734" height="119" rx="2.5"></rect>
+    				</g>
+				</svg>
+
+				<h5>You are leaving Confectionarium.com</h5>
+
+				<p>Are you sure you want to leave our site?</p>
+				
+				<figure>
+
+					<a class="button-secondary-pink" href="#">No, keep me here!</a>
+
+					<a class="button-tertiary-blue" href="#">Until next time.</a>
+
+				</figure>
+
+			</dialog>
+
+			<button id="open-modal" type="button">Modal Button</button>
+
 		</section>
 
 	</main>
@@ -140,7 +175,25 @@
 		<p>Copyright © 2019 Confectionarium USA, Inc. All rights reserved.</p>
 
 	</footer>
-	
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+const modal = document.querySelector('dialog');
+const open = document.getElementById('open-modal');
+
+open.addEventListener('click', () => {
+modal.showModal();
+});
+
+modal.addEventListener('click', event => {
+if (event.target === modal) {
+modal.close('cancelled');
+}
+});
+
+});
+</script>
+
 </body>
 
 </html>
