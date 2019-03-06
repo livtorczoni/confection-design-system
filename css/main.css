@@ -134,7 +134,7 @@ cite {
 
 a {
 	color: inherit;
-	font-family: var(--font-primary);
+	text-decoration: none;
 }
 
 a:hover {
@@ -346,7 +346,7 @@ Examples Component
 }
 
 /************************************
-Accordian Section
+Accordion Section
 **************************************/
 details {
 	background-color: var(--color-pink-lightest);
@@ -364,22 +364,33 @@ summary {
 
 summary:hover {
 	background-color: var(--color-grey-light);
-	border: .02rem solid var(--color-grey-light);
 	color: white;
+	transform: scale(1.009);
 	transition: all .1s ease-in-out;
 }
 
 summary:focus, details[open] summary {
+	animation: slide-down .2s ease-in;
 	background-color: var(--color-grey-light);
-	background-image: url(../images/switch.svg) no-repeat;
-    color: transparent;
 	color: white;
 	outline: none;
 }
 
 summary::-webkit-details-marker {
-	background-image: url(../images/plus.svg);
     color: transparent;
+}
+
+summary:before {
+	content: '+';
+	display: inline-block;
+	line-height: 1;
+}
+
+
+
+details[open] summary:before {
+	transform: rotate(45deg);
+	transition: all .3s ease;
 }
 
 details div {
@@ -495,7 +506,6 @@ secondary buttons
 	color: white;
 	display: inline-block;
 	font-family: var(--font-secondary);
-	font-size: var(--size-medium);
 	margin: 1.5rem;
 	padding: 1rem 3.3rem;
 	text-decoration: none;
@@ -525,7 +535,6 @@ secondary buttons
 	color: white;
 	display: inline-block;
 	font-family: var(--font-secondary);
-	font-size: var(--size-medium);
 	margin: 1.5rem;
 	padding: 1rem 3.3rem;
 	text-decoration: none;
@@ -554,7 +563,6 @@ secondary buttons
 	color: var(--color-grey-lightest);
 	display: inline-block;
 	font-family: var(--font-secondary);
-	font-size: var(--size-medium);
 	margin: 1.5rem;
 	padding: 1rem 3.3rem;
 	text-decoration: none;
@@ -588,7 +596,6 @@ tertiary buttons
 	color: var(--color-blue);
 	display: inline-block;
 	font-family: var(--font-secondary);
-	font-size: var(--size-medium);
 	margin: 1.5rem;
 	padding: 1rem 3.3rem;
 	text-decoration: none;
@@ -602,7 +609,7 @@ tertiary buttons
 .button-tertiary-blue:hover, .button-hero:focus  {
 	background-color: var(--color-blue);
 	color: white;
-	transform: scale(1.05);
+	transform: scale(1.02);
 	transition: all .2s ease-in-out;
 }
 
@@ -618,7 +625,6 @@ tertiary buttons
 	color: var(--color-pink);
 	display: inline-block;
 	font-family: var(--font-secondary);
-	font-size: var(--size-medium);
 	margin: 1.5rem;
 	padding: 1rem 3.3rem;
 	text-decoration: none;
@@ -648,7 +654,6 @@ tertiary buttons
 	color: var(--color-orange-light);
 	display: inline-block;
 	font-family: var(--font-secondary);
-	font-size: var(--size-medium);
 	margin: 1.5rem;
 	padding: 1rem 3.3rem;
 	text-decoration: none;
@@ -669,4 +674,83 @@ tertiary buttons
 	background-color: var(--color-orange-lighter);
 	border: solid 1px var(--color-orange-light);
 	transform: scale(0.99);
+}
+
+/******************************************
+modal dialog
+******************************************/
+
+dialog {
+	animation: fade .2s ease, slide-down .6s ease-in;
+	border: none;
+	border-left: 6px solid var(--color-pink-light);
+	border-radius: .1rem .1rem .4rem .4rem;
+	box-shadow: 4px 4px 4px #d3d3d3;
+	text-align: center;
+}
+
+dialog[open] {
+	animation: fade .5s ease, slide-down .3s ease-in;
+}
+
+dialog::backdrop {
+	animation: fade .09s ease-in;
+	background-color: rgba( 125, 125, 125, .3 );
+}
+
+dialog a:hover {
+	color: white;
+}
+
+dialog h5 {
+	margin-bottom: .2rem;
+}
+
+dialog svg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.modal-alert {
+	max-width: 19rem;
+}
+
+@keyframes fade {
+
+	0% {
+		opacity: 0;
+	}
+	
+	100% {
+		opactiy: 1;
+	}
+	
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translatey(-.5rem);
+	}
+	
+	85% {
+		transform: translatey(.5rem);
+	}
+	
+	100% {
+		transform: translatey(0);
+	}
+
+@keyframes slide-up {
+	0% {
+		transform: translatey(-.5rem);
+	}
+	
+	85% {
+		transform: translatey(.5rem);
+	}
+	
+	100% {
+		transform: translatey(0);
+	}
 }
