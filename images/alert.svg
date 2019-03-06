@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="209px" height="213px" viewBox="0 0 209 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M107.696641,18.07297 L192.818515,188.316718 C194.300451,191.280589 193.099105,194.884628 190.135234,196.366563 C189.302101,196.783129 188.383423,197 187.451952,197 L17.2082039,197 C13.8944954,197 11.2082039,194.313708 11.2082039,191 C11.2082039,190.068529 11.4250745,189.149851 11.8416408,188.316718 L96.963515,18.07297 C98.4454505,15.1090991 102.049489,13.907753 105.01336,15.3896885 C106.174524,15.9702707 107.116059,16.9118056 107.696641,18.07297 Z" id="Triangle" stroke="#EF8478" stroke-width="10" fill="#FFFFFF"></path>
+        <circle id="Oval" stroke="#EF8478" fill="#EF8478" cx="102.330078" cy="174.124832" r="7.59232718"></circle>
+        <rect id="Rectangle" stroke="#EF8478" fill="#EF8478" x="97.7961726" y="62.6813347" width="9.06781115" height="90.4024849" rx="2.5"></rect>
+    </g>
+</svg>
