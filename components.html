@@ -66,6 +66,7 @@
 				
 
 			</figure>
+
 		</section>
 		
 		<h2>Accordions</h2>
@@ -127,32 +128,161 @@
 		<section class="examples">
 
 			<h3 class="examples-title">Modal Dialog</h3>
-			
-			<dialog class="modal-demo">
 
-				<svg class="modal-alert" viewBox="0 0 349 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    				<g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        				<path d="M179.366563,53.7331263 L294.158359,283.316718 C295.640295,286.280589 294.438949,289.884628 291.475078,291.366563 C290.641945,291.783129 289.723267,292 288.791796,292 L59.2082039,292 C55.8944954,292 53.2082039,289.313708 53.2082039,286 C53.2082039,285.068529 53.4250745,284.149851 53.8416408,283.316718 L168.633437,53.7331263 C170.115372,50.7692553 173.719411,49.5679092 176.683282,51.0498447 C177.844446,51.6304269 178.785981,52.5719619 179.366563,53.7331263 Z" id="Triangle" stroke="#EF8478" stroke-width="10" fill="#FFFFFF"></path>
-	       				 <circle id="Oval" stroke="#EF8478" fill="#EF8478" cx="174" cy="261.967773" r="9.96777344"></circle>
-	       				 <rect id="Rectangle" stroke="#EF8478" fill="#EF8478" x="167.891113" y="115.5" width="12.2177734" height="119" rx="2.5"></rect>
-    				</g>
-				</svg>
-
-				<h5>You are leaving Confectionarium.com</h5>
-
-				<p>Are you sure you want to leave our site?</p>
+			<figure>
 				
-				<figure>
+				<dialog class="modal-demo">
 
-					<a class="button-secondary-pink" href="#">No, keep me here!</a>
+					<svg class="modal-alert" viewBox="0 0 349 337" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	    				<g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+	        				<path d="M179.366563,53.7331263 L294.158359,283.316718 C295.640295,286.280589 294.438949,289.884628 291.475078,291.366563 C290.641945,291.783129 289.723267,292 288.791796,292 L59.2082039,292 C55.8944954,292 53.2082039,289.313708 53.2082039,286 C53.2082039,285.068529 53.4250745,284.149851 53.8416408,283.316718 L168.633437,53.7331263 C170.115372,50.7692553 173.719411,49.5679092 176.683282,51.0498447 C177.844446,51.6304269 178.785981,52.5719619 179.366563,53.7331263 Z" id="Triangle" stroke="#EF8478" stroke-width="10" fill="#FFFFFF"></path>
+		       				 <circle id="Oval" stroke="#EF8478" fill="#EF8478" cx="174" cy="261.967773" r="9.96777344"></circle>
+		       				 <rect id="Rectangle" stroke="#EF8478" fill="#EF8478" x="167.891113" y="115.5" width="12.2177734" height="119" rx="2.5"></rect>
+	    				</g>
+					</svg>
 
-					<a class="button-tertiary-blue" href="#">Until next time.</a>
+					<h5>You are leaving Confectionarium.com</h5>
 
-				</figure>
+					<p>Are you sure you want to leave our site?</p>
 
-			</dialog>
+						<a class="button-secondary-pink" href="#">No, keep me here!</a>
+
+						<a class="button-tertiary-blue" href="#">Until next time.</a>
+
+				</dialog>
+
+			</figure>
 
 			<button id="open-modal" type="button">Modal Button</button>
+
+		</section>
+
+		<h2>Form Inputs</h2>
+
+		<section class="examples">
+		
+			<h3 class="examples-title">Text Input</h3>
+
+			<figure class="form-field-box">
+
+				<form action="">
+	
+					<label for="your-name">Normal</label>
+					<p class="tertiary-copy">Descriptive Text</p>
+					<input type="text" id="your-name" name="your-name" placeholder="Julia Child" required >
+
+					<label for="your-name">Focus</label>
+					<input type="text" id="your-name" name="your-name" placeholder="Julia Child" class="focus-form" >
+
+					<label for="your-name">Disabled</label>
+					<input type="text" id="your-name" name="your-name" placeholder="Currently Disabled" disabled>
+
+					<label for="your-name">Error</label>
+					<p class="tertiary-copy-error">Required Field</p>
+					<input type="text" id="your-name" name="your-name" placeholder="Julia Child" class="error-form" >
+
+				</form>
+
+			</figure>
+
+			<h3 class="examples-title">Text Area</h3>
+
+			<figure class="form-field-box">
+
+				<form action="">
+
+					<label for="comment">Normal</label>
+					<textarea id="comment" name="comment" placeholder="Placeholder"></textarea>
+					
+					<label for="comment">Focus</label>
+					<textarea id="comment" name="comment" placeholder="Message Text" class="focus-form" ></textarea>
+
+					<label for="comment">Disabled</label>
+					<textarea id="comment" name="comment"   placeholder="Temporarily Disabled" disabled ></textarea>
+
+					<label for="comment">Error</label>
+					<p class="tertiary-copy-error">Required Field</p>
+					<textarea id="comment" name="comment" placeholder="Don't forget to fill out this section" class="error-form"></textarea>
+
+				</form>
+
+			</figure>
+
+			<h3 class="examples-title">Select</h3>
+
+			<figure class="form-field-box">
+
+				<form action="">
+
+					<label for="your-interests">Normal</label>
+						<select id="your-interests" name="your-interests">
+							<option selected disabled hidden value="">Baking Interests</option>
+							<option value="cakes">Cakes</option>
+							<option value="bread">Bread</option>
+							<option value="cookies">Cookies</option>
+							<option value="savory">Savory</option>
+							<option value="sweet">Sweet</option>
+							<option value="sour">Sour</option>
+							<option value="other">Other</option>
+						</select>
+
+						<label for="your-interests">Focus</label>
+						<select id="your-interests" name="your-interests" class="focus-form" >
+							<option selected disabled hidden value="">Baking Interests</option>
+							<option value="cakes">Cakes</option>
+							<option value="bread">Bread</option>
+							<option value="cookies">Cookies</option>
+							<option value="savory">Savory</option>
+							<option value="sweet">Sweet</option>
+							<option value="sour">Sour</option>
+							<option value="other">Other</option>
+						</select>
+
+						<label for="your-interests">Disabled</label>
+						<select id="your-interests" name="your-interests" disabled >
+							<option selected disabled hidden value="">Baking Interests</option>
+							<option value="cakes">Cakes</option>
+							<option value="bread">Bread</option>
+							<option value="cookies">Cookies</option>
+							<option value="savory">Savory</option>
+							<option value="sweet">Sweet</option>
+							<option value="sour">Sour</option>
+							<option value="other">Other</option>
+						</select>
+
+						<label for="your-interests">Error</label>
+						<select id="your-interests" name="your-interests" class="error-form" >
+							<option selected disabled hidden value="">Baking Interests</option>
+							<option value="cakes">Cakes</option>
+							<option value="bread">Bread</option>
+							<option value="cookies">Cookies</option>
+							<option value="savory">Savory</option>
+							<option value="sweet">Sweet</option>
+							<option value="sour">Sour</option>
+							<option value="other">Other</option>
+						</select>
+
+				</form>
+
+			</figure>
+					
+			<h3 class="examples-title">Submit / Button</h3>
+
+			<figure class="form-field-box">
+
+				<form action="">
+
+					<button>Normal</button>
+
+					<button class="hover">Hover</button>
+
+					<button class="active">Active</button>
+
+					<button class="focus">Focus</button>
+
+				</form>
+
+			</figure>
 
 		</section>
 
