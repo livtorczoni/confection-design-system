@@ -6,9 +6,6 @@ body {
 }
 
 main {
-	margin-bottom: 5rem;
-	margin-left: 4rem;
-	margin-right: auto;
 
 	--margin-standard: 2rem;
 
@@ -20,6 +17,9 @@ figure {
 	margin: 0;
 }
 
+html {
+	margin: auto;
+}
 /************************************
 Colors
 **************************************/
@@ -60,14 +60,16 @@ html {
 	--font-primary: 'Roboto Condensed', sans-serif;
 	--font-secondary: 'Roboto', sans-serif;
 
-	--size-xxxxlarge: 2.887rem;
+	--ratio: 1.424;
+	--size-xxxlarge: calc( 1rem * var(--ratio) * var(--ratio) * var(--ratio) * var(--ratio));
+	
 	--size-xxxlarge: 2.566rem;
 	--size-xxlarge: 2.281rem;
 	--size-xlarge: 2.027rem;
 	--size-large: 1.802rem;
 
-	--size-xmedium: 1.602rem;
-	--size-medium: 1.424rem;
+	--size-xmedium: calc( 1rem * var(--ratio) * var(--ratio));
+	--size-medium: calc( 1rem * var(--ratio));
 
 	--size-small: 0.79rem;
 }
@@ -125,7 +127,7 @@ p {
 
 .tertiary-copy {
 	font-size: var(--size-small);
-	margin: 0;
+	margin-bottom: 0;
 }
 
 cite {
@@ -144,6 +146,47 @@ a:hover {
 
 a:active {
 
+}
+
+@media ( min-width: 325px ) {
+
+	html {
+		font-size: 15px;
+	}
+	
+}
+
+
+@media ( min-width: 360px ) {
+
+	html {
+		font-size: 15px;
+	}
+	
+}
+
+@media ( min-width: 414px ) {
+
+	html {
+		font-size: 16px;
+	}
+	
+}
+
+@media ( min-width: 480px ) {
+
+	html {
+		font-size: 17px;
+	}
+	
+}
+
+@media ( min-width: 1500px ) {
+
+	html {
+
+		font-size: 18px;
+	}
 }
 
 /************************************
@@ -167,15 +210,19 @@ Footer Component
 **************************************/
 
 footer {
-	background-color: #F7F9F9;
-	color: var( --color-grey );
+	background-color: var(--color-orange-light);
+	color: white;
 	font-family: var(--font-primary);
 	padding: 2rem;
 }
 
+footer p {
+	color: white;
+	text-align: center;
+}
 
 .footer a {
-	color: #393939;
+	color: white;
 	font-family: var(--font-primary);
 	padding: 0;
 	margin-right: 1rem;
@@ -186,6 +233,7 @@ footer {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 
 .footer li {
@@ -193,7 +241,7 @@ footer {
 }
 
 .footer a:hover {
-	color: #E6B0AA;
+	text-decoration: underline;
 }
 
 /************************************
@@ -211,14 +259,14 @@ Site Nav
 	padding: 0;
 }
 
-.nav-site li {
-	display: inline;
-}
+
 
 .nav-site li a {
+	border-bottom: solid 2px transparent;
 	color: white;
+	display: inline-block;
 	font-family: var(--font-secondary);
-	padding: 0;
+	padding: .4rem;
 	margin: 1rem;
 	text-decoration: none;
 }
@@ -227,6 +275,18 @@ Site Nav
 	border-bottom: solid 2px var(--color-grey-lightest);
 	padding-bottom: 5px;
 	transition: all 0.2s ease;
+}
+
+@media ( min-width: 650px ) {
+
+	.nav-site li {
+		display: inline;
+	}
+
+	.nav-site li a {
+		padding: 0;
+	}
+
 }
 
 /************************************
@@ -648,7 +708,7 @@ input, textarea, select {
 	border: .0625rem solid var(--color-grey-lighter);
 	display: block;
 	margin-bottom: 1.25rem;
-	min-width: 30rem;
+	min-width: 80%;
 }
 
 input, textarea {
@@ -722,8 +782,55 @@ button:focus, input[type="submit"]:focus, .focus {
 }
 
 /************************************
+Secondary Site Nav
+**************************************/
+.secondary-nav-site {
+	background-color: var(--color-orange-light);
+	color: white;
+	display: block;
+	margin-top: 1.5rem;
+	position: relative;
+}
+
+.secondary-nav-site ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-nav-site ul ul {
+	margin-left: 1.5rem;
+}
+
+.secondary-nav-site li {
+	display: inline;
+}
+
+.secondary-nav-site li a {
+ 	display: block;
+ 	text-decoration: none;
+ 	padding: 1rem;
+}
+
+.secondary-nav-site li a:hover {
+	color: white;
+	text-decoration: underline;
+}
+
+.secondary-nav-site li a:active {
+	color: white;
+	font-size: var(--size-medium);
+	text-decoration: underline;
+}
+
+/************************************
 Examples Component
 **************************************/
+
+
+.current-page {
+	border-bottom: solid 2px var(--color-grey-lightest);
+}
 
 .light-charcoal-text {
 	color: var( --color-grey-light );
@@ -846,4 +953,9 @@ Examples Component
 
 .error-form {
 	border: 1px solid red;
+}
+
+.primary-nav-example {
+	background-color: var(--color-blue);
+	padding: 1rem;
 }
