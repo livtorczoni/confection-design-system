@@ -20,6 +20,10 @@ figure {
 html {
 	margin: auto;
 }
+
+img {
+	max-width: 100%;
+}
 /************************************
 Colors
 **************************************/
@@ -701,6 +705,157 @@ dialog svg {
 }
 
 /******************************************
+Notifications
+******************************************/
+
+.notification-item {
+	padding: 1rem;
+	width: 30%;
+}
+
+.warning-notification-item {
+		align-items: center;
+		background-color: var(--color-orange-lightest);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1rem;
+		width: 80%;
+	}
+
+@media ( min-width: 600px ) {
+	.warning-notification-item {
+		align-items: center;
+		background-color: var(--color-orange-lightest);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: .5rem;
+		margin-top: .5rem;
+		padding: 1rem;
+		width: 80%;
+	}
+}
+
+.warning-notification-item svg {
+	margin-bottom: 1rem;
+}
+
+.warning-items {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+
+.error-notification-item {
+		align-items: center;
+		background-color: var(--color-pink-light);
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1rem;
+		text-transform: uppercase;
+		width: 80%;
+}
+
+.error-notification-item svg {
+		margin-bottom: 1.5rem;
+		margin-right: 0;
+}
+
+.error-notification-item a {
+	font-size: var(--size-small);
+	text-align: center;
+}
+
+@media ( min-width: 700px ) {
+	.error-notification-item {
+		align-items: center;
+		background-color: var(--color-pink-light);
+		color: white;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: .5rem;
+		margin-top: .5rem;
+		padding: 1rem;
+		text-transform: uppercase;
+		width: 80%;
+	}
+
+	.error-notification-item svg {
+		margin-right: 1.5rem;
+	}
+}
+
+.neutral-notification-item {
+	align-items: center;
+	background-color: var(--color-grey);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
+	width: 80%;
+}
+
+.neutral-notification-item h4 {
+	color: white;
+	text-align: center;
+}
+
+.neutral-notification-item svg {
+	margin-top: 1rem;
+}
+
+.neutral-notification-item a {
+	font-size: var(--size-small);
+	text-align: center;
+}
+
+@media ( min-width: 700px ) {
+	.neutral-notification-item {
+		align-items: center;
+		background-color: var(--color-grey);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-bottom: .5rem;
+		margin-top: .5rem;
+		padding: 1rem;
+		width: 80%;
+	}
+
+	.neutral-notification-item h4 {
+		color: white;
+		margin-right: 1rem;
+		text-align: center;
+	}
+}
+
+.success-notification-item {
+	align-items: center;
+	background-color: var(--color-blue-lightest);
+	display: flex;
+	flex-direction: column;
+	margin-bottom: .5rem;
+	margin-top: .5rem;
+	padding: 1rem;
+	width: 80%;
+}
+
+.success-notification-item h5 {
+	margin: 0;
+	padding: 0;
+}
+
+.success-notification-item svg {
+	margin-bottom: 1rem;
+}
+
+/******************************************
 Form Inputs
 ******************************************/
 
@@ -782,6 +937,102 @@ button:focus, input[type="submit"]:focus, .focus {
 }
 
 /************************************
+Header-Block Component
+**************************************/
+
+.header-block-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+    background-image: url(https://i1.wp.com/www.asharpeye.com/wp-content/uploads/2017/06/Baking-Kits-header.jpg?fit=1140%2C660);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding: 1rem;
+}
+
+@media ( max-width: 800px ) {
+
+	.header-block-hero {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    	text-align: center;
+	}
+}
+
+@media ( max-width: 600px ) {
+
+	.header-block-hero {
+		align-items: flex-start;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
+
+.header-block-hero h1 {
+	font-size: 2.8rem;
+	color: #fafafa;
+	margin: .5rem;
+}
+
+@media ( min-width: 800px ) {
+	.header-block-hero h1 {
+		color: #fafafa;
+		font-size: 5rem;
+		margin-bottom: 0;
+	}
+}
+
+.hero-block-featured-copy {
+	font-size: 1.6rem;
+	color: white;
+	font-family: var(--font-primary);
+	font-style: italic;
+	margin: 0;
+}
+
+@media ( min-width: 800px ) {
+
+	.hero-block-featured-copy {
+		font-size: var(--size-xlarge);
+	}
+}
+
+@media ( min-width: 600px ) {
+
+	.hero-block-featured-copy {
+		color: white;
+		font-family: var(--font-primary);
+		font-size: 2.3rem;
+		font-style: italic;
+		font-weight: 400;
+		margin-top: .5rem;
+		margin-bottom: .5rem;
+	}
+}
+
+.hero-block-text a {
+	font-size: var(--size-medium);
+}
+
+@media ( min-width: 800px ) {
+	.hero-block-text a {
+		margin: 0;	
+	}
+}
+
+@media ( min-width: 600px ) {
+	.hero-block-text a {
+		margin-top: 0;
+	}
+}
+
+/************************************
 Secondary Site Nav
 **************************************/
 .secondary-nav-site {
@@ -829,7 +1080,8 @@ Examples Component
 
 
 .current-page {
-	border-bottom: solid 2px var(--color-grey-lightest);
+	text-transform: uppercase;
+	letter-spacing: .425rem;
 }
 
 .light-charcoal-text {
